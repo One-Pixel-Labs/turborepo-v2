@@ -3,11 +3,13 @@
   "compilerOptions": {
     "strictNullChecks": true,
     "allowJs": true,
+    "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
       "~/*": [
         "src/*"
-      ]
+      ],
+      "@components/*": ["src/components/*"]
     }
   },
   "exclude": [

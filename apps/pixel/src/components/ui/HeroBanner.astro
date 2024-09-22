@@ -1,0 +1,120 @@
+---
+
+---
+
+<section
+  class="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800"
+>
+  <div class="absolute inset-0 z-0">
+    <div
+      class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjMjEyMTIxIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDVMNSAwWk02IDRMNCA2Wk0tMSAxTDEgLTFaIiBzdHJva2U9IiMxODE4MTgiIHN0cm9rZS13aWR0aD0iMSI+PC9wYXRoPgo8L3N2Zz4=')] opacity-20"
+    >
+    </div>
+    <div class="absolute inset-0" id="pixelAnimation"></div>
+  </div>
+
+  <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+    <h1
+      class="text-5xl sm:text-6xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-pink-400 tracking-tight leading-tight mb-4"
+    >
+      Modern Web Development for a New Era
+    </h1>
+    <p class="mt-6 text-xl sm:text-2xl text-gray-300 font-light">
+      From one-pagers to full-scale web applications, we deliver cutting-edge solutions.
+    </p>
+    <div class="mt-10 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+      <a
+        href="#"
+        class="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 transition-all duration-200 ease-in-out transform hover:scale-105"
+      >
+        Contact Us
+      </a>
+      <a
+        href="#"
+        class="inline-flex items-center px-8 py-3 border border-blue-400 text-base font-medium rounded-full text-blue-400 bg-transparent hover:bg-blue-400 hover:text-white transition-all duration-200 ease-in-out transform hover:scale-105"
+      >
+        Our Work
+      </a>
+    </div>
+    <p class="mt-8 text-lg text-gray-300 font-light">
+      At OnePixelLabs, we craft digital experiences with the latest tech stack, empowering businesses to succeed online.
+    </p>
+  </div>
+
+  <div class="absolute bottom-0 left-0 right-0">
+    <svg viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M0 320L48 304C96 288 192 256 288 240C384 224 480 224 576 245.3C672 267 768 309 864 309.3C960 309 1056 267 1152 256C1248 245 1344 267 1392 277.3L1440 288V320H0Z"
+        fill="rgba(26, 26, 46, 0.5)"></path>
+    </svg>
+  </div>
+
+  <style>
+    .pixel {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      background-color: white;
+      opacity: 0;
+      transition: opacity 2s ease-out;
+    }
+  </style>
+
+  <script>
+    function createPixel(x: number, y: number) {
+      const pixel = document.createElement('div');
+      pixel.classList.add('absolute', 'w-1', 'h-1', 'bg-white', 'opacity-50');
+      pixel.style.left = `${x}px`;
+      pixel.style.top = `${y}px`;
+      return pixel;
+    }
+
+    async function animatePixels() {
+      const container = document.getElementById('pixelAnimation');
+      if (!container) return;
+
+      const containerRect = container.getBoundingClientRect();
+      // Add a limited number of stars at a time
+      let totalStars = 0;
+      const maxStars = 100; // Total number of stars
+      const minStars = 50; // Min number of stars
+      const addStarInterval = 1500; // Add a star every 500ms
+
+      while (totalStars < maxStars) {
+        if (totalStars >= maxStars) return; // Stop adding stars once we reach the limit
+        if (totalStars >= minStars) {
+          await new Promise<void>((resolve) => setTimeout(resolve, addStarInterval)); // add random delay between stars
+        }
+        const x = Math.random() * containerRect.width;
+        const y = Math.random() * containerRect.height * 0.9; // Avoid the bottom area
+        const pixel = createPixel(x, y);
+        container.appendChild(pixel);
+        totalStars++;
+
+        setTimeout(
+          () => {
+            pixel.style.transform = `translate(${Math.random() * 20 - 10}px, ${Math.random() * 20 - 10}px)`;
+            pixel.style.opacity = (Math.random() * 0.5 + 0.5).toString(); // Varying opacity
+            // // Gentle twinkle effect
+            setTimeout(() => {
+              pixel.style.opacity = (Math.random() * 0.5 + 0.5).toString();
+            }, Math.random() * addStarInterval);
+
+            // remove the pixel after 2s + random time
+            setTimeout(() => {
+              pixel.remove();
+              totalStars--;
+            }, Math.random() * addStarInterval);
+          },
+          Math.random() * 5000 + 1000
+        ); // Slower appearance, between 1-6 seconds
+      }
+
+      requestAnimationFrame(animatePixels);
+    }
+
+    document.addEventListener('astro:page-load', () => {
+      animatePixels();
+    });
+  </script>
+</section>
