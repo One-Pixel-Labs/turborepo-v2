@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "commit": "./commit.sh",
     "build": "turbo build",
     "dev": "turbo dev",
     "pixel": "turbo dev --filter pixel",
