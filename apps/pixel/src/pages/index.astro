@@ -12,6 +12,7 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import HeroBanner from '~/components/ui/HeroBanner.astro';
+import ServicesGrid from '~/components/ui/ServicesGrid.astro';
 
 const metadata = {
   title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
@@ -20,9 +21,13 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
+  <!-- Hero Banner ******************* -->
+  <!-- <HeroBanner /> -->
 
-  <HeroBanner />
+  <!-- Service Grid ******************* -->
+  <!-- <ServicesGrid /> -->
+
+  <!-- Hero Widget ******************* -->
   <Hero
     actions={[
       {
@@ -34,27 +39,23 @@ const metadata = {
       },
       { text: 'Learn more', href: '#features' },
     ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
+    title="One Pixel Labs"
+    image={{ src: '~/assets/images/hero-image.png', alt: 'Hero Image' }}
   >
-    <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white highlight"> Astro 4.0</span> + Tailwind CSS
-    </Fragment>
-
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 4.0
-        + Tailwind CSS.</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-      Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages &
-      Blogs.
+      <p class="text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mb-10">
+        At OnePixelLabs, we fuse cutting-edge technology with tailored solutions to deliver dynamic, high-performance
+        web experiences. Whether you're launching a sleek one-page website or a robust full-stack application, we
+        specialize in building custom solutions that scale with your business needs. With a passion for innovation, we
+        provide expertise across the web development spectrum, including browser extensions and web scrapers, ensuring
+        your digital presence is not only modern but future-proof.
+      </p>
     </Fragment>
   </Hero>
 
   <!-- Note Widget ******************* -->
 
-  <Note />
+  <Note title={`"Elevate your digital presence with solutions built for the future."`} />
 
   <!-- Features Widget *************** -->
 

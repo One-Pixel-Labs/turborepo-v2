@@ -1,0 +1,50 @@
+---
+// ServicesGrid.astro
+---
+
+<section class="py-16 bg-gray-900 relative overflow-hidden">
+  <div
+    class="absolute inset-0 grid grid-cols-[repeat(20,minmax(0,1fr))] grid-rows-[repeat(20,minmax(0,1fr))] opacity-10"
+  >
+    {
+      Array(400)
+        .fill(0)
+        .map((_, i) => (
+          <Fragment key={i}>
+            <div class="border-r border-b border-green-400" />
+          </Fragment>
+        ))
+    }
+  </div>
+  <div class="container mx-auto px-4 relative z-10">
+    <h2 class="text-4xl md:text-6xl font-bold text-center mb-12 text-white">Our Expertise</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="bg-gray-800 p-8 rounded-2xl shadow-lg backdrop-blur-sm bg-opacity-50 border border-gray-700">
+        <h3 class="text-xl font-semibold mb-3 text-white">One-Pager Websites</h3>
+        <p class="text-gray-300 mb-4">Elegant, fast-loading single-page websites to make a quick impact.</p>
+      </div>
+      <div class="bg-gray-800 p-8 rounded-2xl shadow-lg backdrop-blur-sm bg-opacity-50 border border-gray-700">
+        <h3 class="text-xl font-semibold mb-3 text-white">Full-stack Web Applications</h3>
+        <p class="text-gray-300 mb-4">
+          Custom-built web apps for businesses of all sizes, from MVPs to enterprise-level solutions.
+        </p>
+      </div>
+      <div class="bg-gray-800 p-8 rounded-2xl shadow-lg backdrop-blur-sm bg-opacity-50 border border-gray-700">
+        <h3 class="text-xl font-semibold mb-3 text-white">Chrome Extensions</h3>
+        <p class="text-gray-300 mb-4">Enhance productivity and usability with custom-built browser extensions.</p>
+      </div>
+      <div class="bg-gray-800 p-8 rounded-2xl shadow-lg backdrop-blur-sm bg-opacity-50 border border-gray-700">
+        <h3 class="text-xl font-semibold mb-3 text-white">Web Scrapers</h3>
+        <p class="text-gray-300 mb-4">We build powerful web scrapers that deliver actionable insights from the web.</p>
+      </div>
+    </div>
+    <div class="text-center mt-12">
+      <a
+        href="#"
+        class="inline-block bg-blue-600 text-white py-3 px-6 rounded-full font-semibold hover:bg-blue-700 transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+      >
+        Explore Services
+      </a>
+    </div>
+  </div>
+</section>

@@ -4,7 +4,7 @@
     "commit": "./commit.sh",
     "build": "turbo build",
     "dev": "turbo dev",
-    "pixel": "turbo dev --filter pixel",
+    "pixel": "turbo dev --filter one-pixel-labs",
     "lint": "turbo lint",
     "type-check": "turbo type-check",
     "clean": "turbo clean",
