@@ -3,6 +3,7 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
+    "pixel": "turbo dev --filter pixel",
     "lint": "turbo lint",
     "type-check": "turbo type-check",
     "clean": "turbo clean",
