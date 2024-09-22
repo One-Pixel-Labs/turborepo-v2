@@ -7,10 +7,8 @@ import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
+// import Stats from '~/components/widgets/Stats.astro';
 import HeroBanner from '~/components/ui/HeroBanner.astro';
 import ServicesGrid from '~/components/ui/ServicesGrid.astro';
 
@@ -22,13 +20,13 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <!-- Hero Banner ******************* -->
-  <!-- <HeroBanner /> -->
+  <HeroBanner />
 
   <!-- Service Grid ******************* -->
-  <!-- <ServicesGrid /> -->
+  <ServicesGrid />
 
   <!-- Hero Widget ******************* -->
-  <!-- <Hero
+  <Hero
     actions={[
       {
         variant: 'primary',
@@ -51,13 +49,13 @@ const metadata = {
         your digital presence is not only modern but future-proof.
       </p>
     </Fragment>
-  </Hero> -->
+  </Hero>
 
   <!-- Note Widget ******************* -->
   <Note title={`"Elevate your digital presence with solutions built for the future."`} />
 
   <!-- Features Widget **************** -->
-  <!-- <Features
+  <Features
     id="features"
     tagline="services"
     title="One Pixel Labs. The Ultimate Web Development Solution"
@@ -125,7 +123,7 @@ const metadata = {
         icon: 'tabler:headset',
       },
     ]}
-  /> -->
+  />
 
   <!-- Content Widget **************** -->
   <Content
