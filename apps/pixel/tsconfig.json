@@ -7,9 +7,17 @@
     "noImplicitAny": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": ["src/*"],
-      "@components/*": ["src/components/*"]
-    }
+      "~/*": [
+        "src/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   },
-  "exclude": ["dist/"]
+  "exclude": [
+    "dist/"
+  ]
 }

@@ -1,8 +1,8 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
-import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import ContactForm from '~/components/react/Contact.tsx';
 
 const metadata = {
   title: 'Contact',
@@ -13,35 +13,9 @@ const metadata = {
   <!-- HeroText Widget ******************* -->
 
   <HeroText tagline="Contact" title="Let's Connect!" />
-
-  <ContactUs
-    id="form"
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
-    inputs={[
-      {
-        type: 'text',
-        name: 'name',
-        label: 'Name',
-      },
-      {
-        type: 'email',
-        name: 'email',
-        label: 'Email',
-      },
-    ]}
-    textarea={{
-      label: 'Message',
-    }}
-    disclaimer={{
-      label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
-    }}
-    description="Our support team typically responds within 24 business hours."
-  />
+  <ContactForm client:load />
 
   <!-- Features2 Widget ************** -->
-
   <Features2
     title="We are here to help!"
     items={[
@@ -67,3 +41,26 @@ const metadata = {
     ]}
   />
 </Layout>
+
+<script>
+  import { toast } from 'sonner';
+
+  // import { navigate } from 'astro:transitions/client';
+
+  try {
+    const form = document.querySelector('form');
+    form?.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const formData = new FormData(form);
+
+      console.log(Object.fromEntries(formData));
+      toast.success('Message sent successfully!');
+      // const { error } = await actions.newsletter(formData);
+      // if (!error) navigate('/confirmation');
+    });
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    }
+  }
+</script>
