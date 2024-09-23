@@ -24,12 +24,11 @@ const { metadata } = Astro.props;
   </main>
   <slot name="footer">
     <Footer {...footerData}>
-      <Fragment slot="foot-note">
+      <Fragment slot="footer-node">
         <section class="flex flex-row items-center">
           <span class="inline-block scale-[65%]">
             <Logo />
           </span>
-
           <span class="text-accent dark:text-muted highlight">Made by One Pixel Labs · All rights reserved.</span>
         </section>
       </Fragment>
