@@ -38,8 +38,6 @@ const {
   isSticky = false,
   isDark = false,
   isFullWidth = false,
-  showToggleTheme = false,
-  showRssFeed = false,
   position = 'center',
 } = Astro.props;
 
@@ -91,7 +89,15 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
             return (
               <li class={links?.length ? 'dropdown' : ''}>
                 <button type="button" class="hover:text-link dark:hover:text-white px-4 py-3 flex gap-1 items-center">
-                  <span>{text}</span>
+                  {!href && <span>{text}</span>}
+                  {href && (
+                    <a
+                      class:list={['hover:text-link dark:hover:text-white', { 'aw-link-active': href === currentPath }]}
+                      href={href}
+                    >
+                      {text}
+                    </a>
+                  )}
                   {hasLink && (
                     <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 ml-0.5 rtl:ml-0 rtl:mr-0.5 hidden md:inline" />
                   )}
