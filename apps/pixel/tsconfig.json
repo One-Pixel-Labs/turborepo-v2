@@ -6,13 +6,9 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": [
-        "src/*"
-      ],
+      "~/*": ["src/*"],
       "@components/*": ["src/components/*"]
     }
   },
-  "exclude": [
-    "dist/"
-  ]
+  "exclude": ["dist/"]
 }
