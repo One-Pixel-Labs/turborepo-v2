@@ -13,7 +13,9 @@ import HeroBanner from '~/components/ui/HeroBanner.astro';
 import ServicesGrid from '~/components/ui/ServicesGrid.astro';
 
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  title: 'One Pixel Labs - The Ultimate Web Development Solution',
+  description:
+    'One of the most professional and comprehensive solutions for web development. Reached out to us to get your dream website up and running in no time.',
   ignoreTitleTemplate: true,
 };
 ---
@@ -21,9 +23,6 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Banner ******************* -->
   <HeroBanner />
-
-  <!-- Service Grid ******************* -->
-  <ServicesGrid />
 
   <!-- Hero Widget ******************* -->
   <Hero
@@ -50,6 +49,9 @@ const metadata = {
       </p>
     </Fragment>
   </Hero>
+
+  <!-- Service Grid ******************* -->
+  <ServicesGrid />
 
   <!-- Note Widget ******************* -->
   <Note title={`"Elevate your digital presence with solutions built for the future."`} />
