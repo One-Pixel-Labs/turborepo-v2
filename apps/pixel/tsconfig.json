@@ -4,6 +4,7 @@
     "strictNullChecks": true,
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
     "baseUrl": ".",
     "paths": {
       "~/*": ["src/*"],

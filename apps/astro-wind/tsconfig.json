@@ -3,14 +3,11 @@
   "compilerOptions": {
     "strictNullChecks": true,
     "allowJs": true,
+    "noImplicitAny": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": [
-        "src/*"
-      ]
+      "~/*": ["src/*"]
     }
   },
-  "exclude": [
-    "dist/"
-  ]
+  "exclude": ["dist/"]
 }
