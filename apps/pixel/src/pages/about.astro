@@ -13,7 +13,6 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
-
   <Hero
     tagline="About us"
     image={{
@@ -21,21 +20,19 @@ const metadata = {
       alt: 'Caos Image',
     }}
   >
-    <Fragment slot="title">
-      Elevate your online presence with our <br />
-      <span class="text-accent dark:text-white highlight"> Beautiful Website Templates</span>
-    </Fragment>
+    <Fragment slot="title"> Elevate your online presence with our modern digital solutions </Fragment>
 
     <Fragment slot="subtitle">
-      Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue. Donec
-      quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis nisi tempus.
-      Suspendisse vitae nisi eget tortor luctus maximus sed non lectus.
+      At OnePixelLabs, we are passionate about crafting modern digital solutions that elevate brands and drive business
+      growth. With a focus on innovation, we specialize in building dynamic, custom websites, end-to-end applications,
+      and powerful web scrapers, while also offering expertise in developing Chrome extensions. Our mission is to bring
+      your digital ideas to life using cutting-edge technologies, and ensure your online presence is not only stunning
+      but also optimized for long-term success.
     </Fragment>
   </Hero>
 
   <!-- Stats Widget ****************** -->
-
-  <Stats
+  <!-- <Stats
     title="Statistics about us"
     stats={[
       { title: 'Offices', amount: '4' },
@@ -43,78 +40,94 @@ const metadata = {
       { title: 'Templates', amount: '12' },
       { title: 'Awards', amount: '24' },
     ]}
-  />
+  /> -->
 
   <!-- Features3 Widget ************** -->
-
   <Features3
-    title="Our templates"
-    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
+    title="Our Core Expertise"
+    subtitle="We specialize in crafting modern digital solutions that elevate brands and drive business growth. Our core expertise includes:"
     columns={3}
     isBeforeContent={true}
     items={[
       {
-        title: 'Educational',
+        title: 'Custom Web Development',
         description:
-          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
+          'We design and build bespoke websites, tailored to your business needs, from simple one-pagers to complex, fully functional web applications.',
         icon: 'tabler:template',
       },
       {
-        title: 'Interior Design',
+        title: 'Full-Stack Applications',
         description:
-          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
-        icon: 'tabler:template',
+          'Our team handles everything from front-end interfaces to back-end architecture, ensuring a seamless experience across the entire web application.',
+        icon: 'tabler:stack-3',
       },
       {
-        title: 'Photography',
+        title: 'Chrome Extensions',
         description:
-          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
-        icon: 'tabler:template',
+          'Streamline tasks and enhance user productivity with custom Chrome extensions built to suit your specific workflows and business requirements.',
+        icon: 'tabler:brand-chrome',
+      },
+      {
+        title: 'Data Scraping Solutions',
+        description:
+          'Extract valuable insights with our advanced web scraping tools, designed to collect, process, and analyze large-scale data efficiently.',
+        icon: 'tabler:database-import',
+      },
+      {
+        title: 'Modern Tech Stack',
+        description:
+          'We utilize the latest tools and frameworks, including AstroJS, React, Next.js, and TypeScript, to ensure your project is fast, scalable, and future-proof.',
+        icon: 'tabler:currency-ethereum',
+      },
+      {
+        title: 'Client-Centric Approach',
+        description:
+          'Collaboration is at the heart of what we do. We work closely with our clients to understand their vision and deliver digital products that exceed expectations.',
+        icon: 'tabler:viewfinder',
       },
     ]}
   />
 
   <!-- Features3 Widget ************** -->
-
   <Features3
     columns={3}
     isAfterContent={true}
     items={[
       {
-        title: 'E-commerce',
+        title: 'Custom Web Applications',
         description:
-          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
+          'Build feature-rich, interactive web applications tailored to your business needs, providing seamless user experiences and optimized for performance across all devices.',
         icon: 'tabler:template',
       },
       {
-        title: 'Blog',
+        title: 'E-Commerce Platforms',
         description:
-          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
-        icon: 'tabler:template',
+          'Create robust online stores with secure payment gateways, inventory management, and custom functionalities, designed to scale with your business and maximize sales.',
+        icon: 'tabler:brand-shopee',
       },
       {
-        title: 'Business',
+        title: 'Progressive Web Apps (PWAs)',
         description:
-          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
-        icon: 'tabler:template',
+          'Develop progressive web apps that offer a native app experience on mobile devices, with offline capabilities, push notifications, and fast loading times.',
+        icon: 'tabler:brand-astro',
       },
       {
-        title: 'Branding',
+        title: 'SaaS (Software as a Service) Solutions',
         description:
-          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
-        icon: 'tabler:template',
+          'Build cloud-based SaaS platforms for delivering services to users, featuring multi-tenant architectures, subscription models, and seamless user management.',
+        icon: 'tabler:apps',
       },
       {
-        title: 'Medical',
+        title: 'Custom Chrome Extensions',
         description:
-          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
-        icon: 'tabler:template',
+          'Extend browser functionality with custom-built Chrome extensions, automating tasks, enhancing productivity, and integrating with third-party services.',
+        icon: 'tabler:brand-chrome',
       },
       {
-        title: 'Fashion Design',
+        title: 'Data Scraping & Automation Tools',
         description:
-          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
-        icon: 'tabler:template',
+          'Create advanced web scraping solutions for gathering and processing large datasets, or build automation tools to streamline repetitive tasks and enhance operational efficiency.',
+        icon: 'tabler:database-import',
       },
     ]}
     image={{
@@ -124,34 +137,32 @@ const metadata = {
   />
 
   <!-- Steps2 Widget ****************** -->
-
   <Steps2
     title="Our values"
-    subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
+    subtitle="We are committed to delivering exceptional digital solutions that drive business growth and elevate brands. Our core values include:"
     items={[
       {
-        title: 'Customer-centric approach',
+        title: 'Innovation at Our Core',
         description:
-          'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
+          'We are driven by a passion for exploring new technologies and crafting solutions that push the boundaries of web development.',
       },
       {
-        title: 'Constant Improvement',
+        title: 'Client-Centered Approach',
         description:
-          'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
+          'Your vision is our priority. We take the time to understand your needs and work collaboratively to deliver products that exceed expectations.',
       },
       {
-        title: 'Ethical Practices',
+        title: 'Quality and Precision:',
         description:
-          'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+          'Every line of code we write is aimed at achieving excellence. From design to deployment, we focus on delivering high-quality, flawless solutions.',
       },
     ]}
   />
 
   <!-- Steps2 Widget ****************** -->
-
   <Steps2
     title="Achievements"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
+    subtitle="Our commitment to excellence has earned us recognition in the industry and positive feedback from our clients. Some of our key achievements include:"
     isReversed={true}
     callToAction={{
       text: 'See more',
@@ -160,68 +171,21 @@ const metadata = {
     items={[
       {
         title: 'Global reach',
-        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
+        description:
+          'Our reach extends across multiple industries, serving clients around the globe, from startups to established enterprises.',
         icon: 'tabler:globe',
       },
       {
         title: 'Positive customer feedback and reviews',
         description:
-          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
+          'We take pride in our customer satisfaction rates and positive reviews, reflecting our commitment to excellence and client success.',
         icon: 'tabler:message-star',
       },
       {
-        title: 'Awards and recognition as industry experts',
+        title: 'Industry experts',
         description:
-          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
+          'Our team of industry experts brings a wealth of knowledge and experience to every project, ensuring best-in-class solutions and innovative ideas.',
         icon: 'tabler:award',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Our locations"
-    tagline="Find us"
-    columns={4}
-    items={[
-      {
-        title: 'EE.UU',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
-      },
-      {
-        title: 'Spain',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
-      },
-      {
-        title: 'Australia',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
-      },
-      {
-        title: 'Brazil',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Technical Support"
-    tagline="Contact us"
-    columns={2}
-    items={[
-      {
-        title: 'Chat with us',
-        description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
-        icon: 'tabler:messages',
-      },
-      {
-        title: 'Call us',
-        description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
-        icon: 'tabler:headset',
       },
     ]}
   />
