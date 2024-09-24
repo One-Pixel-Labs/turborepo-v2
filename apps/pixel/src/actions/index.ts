@@ -11,7 +11,7 @@ export const server = {
         subject: 'New Form Submission',
         html: `
           <section style="font-family: Arial, sans-serif; padding: 20px; border: 1px solid #ddd;">
-            <h1 style="color: #333;">One Pixel Labs! New Form Submission</h1>
+            <h1 style="color: #fff; margin-bottom: 12px;">One Pixel Labs! New Form Submission</h1>
             <p><strong>First Name:</strong> ${params['first-name']}</p>
             <p><strong>Last Name:</strong> ${params['last-name']}</p>
             <p><strong>Email:</strong> ${params['email'].toLowerCase()}</p>
