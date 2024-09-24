@@ -17,6 +17,8 @@ import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin, lazyImagesRehype
 
 import react from '@astrojs/react';
 
+import node from '@astrojs/node';
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const hasExternalScripts = false;
@@ -87,4 +89,8 @@ export default defineConfig({
       },
     },
   },
+
+  adapter: node({
+    mode: 'standalone',
+  }),
 });
