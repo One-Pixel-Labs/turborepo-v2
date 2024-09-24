@@ -17,7 +17,7 @@ import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin, lazyImagesRehype
 
 import react from '@astrojs/react';
 
-import node from '@astrojs/node';
+import netlify from '@astrojs/netlify';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -90,7 +90,5 @@ export default defineConfig({
     },
   },
 
-  adapter: node({
-    mode: 'standalone',
-  }),
+  adapter: netlify(),
 });
