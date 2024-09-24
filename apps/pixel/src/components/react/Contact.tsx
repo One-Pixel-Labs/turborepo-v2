@@ -199,10 +199,10 @@ export default function Contact() {
                   </div>
                 </fieldset>
               </div>
-              <div className="mt-10 flex justify-end border-t border-gray-900/10 pt-8">
+              <div className="mt-10 flex justify-end border-t border-gray-400 pt-8">
                 <button
                   type="submit"
-                  className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 transition-all duration-200 ease-in-out transform hover:scale-105"
                 >
                   Send message
                 </button>

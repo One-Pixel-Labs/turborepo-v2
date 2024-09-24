@@ -71,8 +71,8 @@ export const footerData = {
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
   socialLinks: [
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
-    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: '#' },
+    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: `${import.meta.env.PUBLIC_BASE_URL}/contact` },
+    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/EdAncerys' },
+    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/ancerys/' },
   ],
 };

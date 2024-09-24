@@ -29,12 +29,12 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/onwidget/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
+        text: 'Start a project today',
+        href: `${import.meta.env.PUBLIC_BASE_URL}/contact`,
+        // target: '_blank',
+        icon: 'tabler:rocket',
       },
-      { text: 'Learn more', href: '#features' },
+      { text: 'Learn more', href: `${import.meta.env.PUBLIC_BASE_URL}/about` },
     ]}
     title="One Pixel Labs"
     image={{ src: '~/assets/images/hero-image.png', alt: 'Hero Image' }}
