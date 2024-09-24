@@ -1,4 +1,5 @@
 import { Toaster, toast } from 'sonner';
+import { actions } from 'astro:actions';
 
 export default function Contact() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -15,8 +16,14 @@ export default function Contact() {
         toast.error('Please fill all required fields');
         return;
       }
+      const { error } = await actions.submitEmail({ params: data });
 
-      toast.success('Message sent successfully');
+      if (error) {
+        toast.error('Error sending email');
+        return;
+      }
+
+      toast.success(`✨ Thanks for reaching out ${data['first-name'] ?? ''}! We'll get back to you soon.`);
     } catch (error) {
       console.error(error);
 
