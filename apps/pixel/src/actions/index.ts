@@ -9,7 +9,18 @@ export const server = {
         from: 'Pixel <onboarding@resend.dev>',
         to: 'lookatemail@gmail.com',
         subject: 'New Form Submission',
-        html: `<section><h1>New Form Submission</h1><p>${JSON.stringify(params)}</p></section>`,
+        html: `
+          <section style="font-family: Arial, sans-serif; padding: 20px; border: 1px solid #ddd;">
+            <h1 style="color: #333;">One Pixel Labs! New Form Submission</h1>
+            <p><strong>First Name:</strong> ${params['first-name']}</p>
+            <p><strong>Last Name:</strong> ${params['last-name']}</p>
+            <p><strong>Email:</strong> ${params['email'].toLowerCase()}</p>
+            <p><strong>Company:</strong> ${params['company']}</p>
+            <p><strong>Phone:</strong> ${params['phone']}</p>
+            <p><strong>Message:</strong> ${params['message']}</p>
+            <p><strong>Budget:</strong> ${params['budget']}</p>
+          </section>
+        `,
       });
       console.log('🤖 SSR EMAIL RESPONSE', res);
 
