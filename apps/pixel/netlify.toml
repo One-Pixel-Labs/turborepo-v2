@@ -1,5 +1,5 @@
 [build]
-  publish = "dist"
+  publish = ".astro"
   command = "turbo run build"
 [build.processing.html]
   pretty_urls = false
