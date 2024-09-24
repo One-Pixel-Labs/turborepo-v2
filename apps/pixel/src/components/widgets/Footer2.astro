@@ -1,0 +1,87 @@
+---
+import { Icon } from 'astro-icon/components';
+import Logo from '../Logo.astro';
+
+interface SocialLink {
+  ariaLabel: string;
+  href: string;
+  text?: string;
+  icon?: string;
+}
+
+interface Link {
+  title: string;
+  links: { text: string; href: string; ariaLabel?: string }[];
+}
+
+const {
+  socialLinks = [] as SocialLink[],
+  secondaryLinks = [],
+  links = [] as Link[],
+  footer = await Astro.slots.render('footer-node'),
+  theme = 'light',
+} = Astro.props;
+const year = new Date().getFullYear();
+---
+
+<footer class="mt-16 border-t border-white/10 pt-8 sm:mt-20" aria-labelledby="footer-heading">
+  <h2 id="footer-heading" class="sr-only">Footer</h2>
+
+  <div class="mx-auto max-w-7xl px-6 pb-10 pt-6 lg:px-8 lg:pt-16">
+    <div class="flex flex-row flex-1 gap-x-28 gap-y-5 flex-wrap">
+      {
+        links.map(({ title, links }: Link) => (
+          <div class="flex flex-col gap-5 w-fit">
+            <div class="dark:text-gray-300 font-medium">{title}</div>
+            {links && Array.isArray(links) && links.length > 0 && (
+              <ul class="text-sm">
+                {links.map(({ text, href, ariaLabel }) => (
+                  <li class="mb-5">
+                    <a
+                      class="text-muted hover:text-gray-700 hover:underline dark:text-gray-400 transition duration-150 ease-in-out"
+                      href={href}
+                      aria-label={ariaLabel}
+                    >
+                      <Fragment set:html={text} />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="mt-8 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+      <div class="flex space-x-6 md:order-2">
+        {
+          !!socialLinks?.length && (
+            <ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0 rtl:ml-0 rtl:-mr-2 rtl:md:ml-0 rtl:md:mr-4">
+              {socialLinks.map(({ ariaLabel, href, text, icon }: SocialLink) => (
+                <li>
+                  <a
+                    class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+                    aria-label={ariaLabel}
+                    href={href}
+                  >
+                    {icon && <Icon name={icon} class="w-5 h-5" />}
+                    {text && <Fragment set:html={text} />}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )
+        }
+      </div>
+      <Fragment slot="footer-node">
+        <section class="flex flex-row gap-2 items-center justify-start">
+          <Logo iconSize="14" fontSize="text-md" />
+          <span class="text-xs leading-5 text-gray-400 md:order-1">
+            &copy; {year} Made by One Pixel Labs · All rights reserved.
+          </span>
+        </section>
+      </Fragment>
+    </div>
+  </div>
+</footer>

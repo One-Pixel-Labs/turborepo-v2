@@ -1,9 +1,11 @@
 import { Toaster, toast } from 'sonner';
 
 export default function Contact() {
-  // form submit
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     try {
+      // --------------------------------------------------------------------------------
+      // 📌  form submit event handler
+      // --------------------------------------------------------------------------------
       e.preventDefault();
       const formData = new FormData(e.currentTarget);
       const data = Object.fromEntries(formData.entries());
@@ -24,7 +26,8 @@ export default function Contact() {
 
   return (
     <div className="relative">
-      <Toaster closeButton richColors />
+      <Toaster closeButton richColors position="top-left" />
+
       <div className="lg:absolute lg:inset-0 lg:left-1/2">
         <img
           alt=""

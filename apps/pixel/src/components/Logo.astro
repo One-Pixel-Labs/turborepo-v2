@@ -1,10 +1,11 @@
 ---
 import { Icon } from 'astro-icon/components';
+const { iconSize = 24, fontSize = 'text-2xl md:text-xl' } = Astro.props;
 ---
 
 <span
-  class="self-center rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white flex flex-row gap-2 items-center"
+  class={`self-center rtl:ml-0 rtl:mr-2 font-bold text-gray-900 whitespace-nowrap dark:text-white flex flex-row gap-2 items-center ${fontSize}`}
 >
-  <Icon name="tabler:flask" class="text-yellow-600" />
+  <Icon name="tabler:flask" class="text-yellow-600" size={iconSize} />
   <p class="bg-gradient-to-r from-yellow-400 to-pink-500 text-transparent bg-clip-text">One Pixel Labs</p>
 </span>
